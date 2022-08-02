@@ -7,6 +7,8 @@ import '../profile/travels.dart';
 // ignore_for_file: prefer_const_constructors
 
 class Profile extends StatefulWidget {
+  const Profile({Key? key}) : super(key: key);
+
   @override
   _ProfileState createState() => _ProfileState();
 }

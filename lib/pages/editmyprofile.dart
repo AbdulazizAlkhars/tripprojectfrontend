@@ -8,14 +8,13 @@ import '../profile/travels.dart';
 // ignore_for_file: prefer_const_constructors
 
 class EditMyProfile extends StatefulWidget {
+  const EditMyProfile({Key? key}) : super(key: key);
+
   @override
   _EditMyProfileState createState() => _EditMyProfileState();
 }
 
 class _EditMyProfileState extends State<EditMyProfile> {
-  late PageController _pageController;
-  int _page = 0;
-  int selectedItem = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

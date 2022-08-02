@@ -107,6 +107,10 @@ class SignUpFormState extends State<SignUpForm> {
                             radius: 100.0,
                             backgroundColor: dargBG,
                             child: CircleAvatar(
+                              radius: 100.0,
+                              backgroundColor: Colors.white,
+                              backgroundImage:
+                                  AssetImage('assets/images/image-default.png'),
                               child: Align(
                                 alignment: Alignment.bottomRight,
                                 child: CircleAvatar(
@@ -119,10 +123,6 @@ class SignUpFormState extends State<SignUpForm> {
                                   ),
                                 ),
                               ),
-                              radius: 100.0,
-                              backgroundColor: Colors.white,
-                              backgroundImage:
-                                  AssetImage('assets/images/image-default.png'),
                             ),
                           ),
 
@@ -142,7 +142,7 @@ class SignUpFormState extends State<SignUpForm> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: darkBG,
-                hintText: 'Add Username',
+                hintText: 'Username',
                 prefixIcon: Icon(Icons.login),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.5),
@@ -173,7 +173,7 @@ class SignUpFormState extends State<SignUpForm> {
               decoration: InputDecoration(
                   filled: true,
                   fillColor: darkBG,
-                  hintText: 'Add Password',
+                  hintText: 'Password',
                   prefixIcon: Icon(Icons.lock_outline),
                   // suffixIcon: Icon(Icons.visibility),
                   suffixIcon: Icon(Icons.visibility_off),
@@ -207,7 +207,7 @@ class SignUpFormState extends State<SignUpForm> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: darkBG,
-                hintText: 'Add Username',
+                hintText: 'First Name',
                 prefixIcon: Icon(Icons.login),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.5),
@@ -222,13 +222,13 @@ class SignUpFormState extends State<SignUpForm> {
               ),
               validator: (value) {
                 if (value!.isEmpty) {
-                  return "Please enter username";
+                  return "Please enter your first name";
                 } else {
                   return null;
                 }
               },
               onSaved: (value) {
-                username = value!;
+                firstName = value!;
               },
             ),
           ),
@@ -238,7 +238,7 @@ class SignUpFormState extends State<SignUpForm> {
               decoration: InputDecoration(
                 filled: true,
                 fillColor: darkBG,
-                hintText: 'Add Username',
+                hintText: 'Last Name',
                 prefixIcon: Icon(Icons.login),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12.5),
@@ -253,13 +253,13 @@ class SignUpFormState extends State<SignUpForm> {
               ),
               validator: (value) {
                 if (value!.isEmpty) {
-                  return "Please enter username";
+                  return "Please enter your last name";
                 } else {
                   return null;
                 }
               },
               onSaved: (value) {
-                username = value!;
+                lastName = value!;
               },
             ),
           ),
@@ -278,19 +278,21 @@ class SignUpFormState extends State<SignUpForm> {
                             .signup(User(
                                 username: username,
                                 password: password,
-                                image: _image?.path));
+                                image: _image?.path,
+                                firstName: firstName,
+                                lastName: lastName));
                         context.go("/mainscreen");
                       } else {
                         print("error");
                       }
                     },
-                    child: Text("Sign Up"),
                     style: ElevatedButton.styleFrom(
                         textStyle: TextStyle(fontSize: 20),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12.5),
                         ),
-                        primary: Colors.red)),
+                        primary: Colors.red),
+                    child: Text("Sign Up")),
               ),
             ),
           )

@@ -5,9 +5,8 @@ import '../tabs/fav_trips.dart';
 import '../tabs/mytrips.dart';
 import '../tabs/whishlist.dart';
 import '../widgets/appbar.dart';
-
-
 import '../widgets/postsitem.dart';
+// ignore_for_file: prefer_const_constructors
 
 class Trips extends StatefulWidget {
   @override

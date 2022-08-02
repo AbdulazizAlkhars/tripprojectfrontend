@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../screens/profile.dart';
+import '../pages/profile.dart';
+// ignore_for_file: prefer_const_constructors
 
 AppBar header(context) {
   return AppBar(

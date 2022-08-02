@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import '../screens/mainscreen.dart';
+import 'package:tripfronend/pages/editmyprofile.dart';
+import 'pages/mainscreen.dart';
 import '../utils/constants.dart';
 import 'pages/signin.dart';
 import 'pages/signup_page.dart';
@@ -17,6 +18,7 @@ final _router = GoRouter(routes: [
   GoRoute(path: "/", builder: (context, state) => SigninPage()),
   GoRoute(path: "/signup", builder: (context, state) => SignUp()),
   GoRoute(path: "/mainscreen", builder: (context, state) => MainScreen()),
+  GoRoute(path: "/editprofile", builder: (context, state) => EditMyProfile()),
 ]);
 
 class MyApp extends StatelessWidget {

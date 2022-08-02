@@ -8,14 +8,14 @@ import 'package:provider/provider.dart';
 import '../providers/authprovider.dart';
 // ignore_for_file: prefer_const_constructors
 
-class MyProfile extends StatefulWidget {
-  const MyProfile({Key? key}) : super(key: key);
+class EditProfile extends StatefulWidget {
+  const EditProfile({Key? key}) : super(key: key);
 
   @override
-  _MyProfileState createState() => _MyProfileState();
+  _EditProfileState createState() => _EditProfileState();
 }
 
-class _MyProfileState extends State<MyProfile> {
+class _EditProfileState extends State<EditProfile> {
   @override
   Widget build(BuildContext context) {
     return ListView(

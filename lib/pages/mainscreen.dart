@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../pages/newsfeed.dart';
-import '../pages/trips.dart';
+import 'newsfeed.dart';
+import 'trips.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -16,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
         children: [

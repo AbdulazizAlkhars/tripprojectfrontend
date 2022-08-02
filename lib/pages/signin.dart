@@ -85,14 +85,15 @@ class SigninPage extends StatelessWidget {
             height: 49,
             child: ElevatedButton(
                 onPressed: () async {
-                  await context.read<UserProvider>().signin(
-                      User(username: username.text, password: password.text));
-// if the user is signed in, navigate to the mainscreen otherwise show error
-                  if (context.read<UserProvider>().isAuth == true) {
-                    context.go("/SecondMain");
-                  } else {
-                    print("Error");
-                  }
+//                   await context.read<UserProvider>().signin(
+//                       User(username: username.text, password: password.text));
+// // if the user is signed in, navigate to the mainscreen otherwise show error
+//                   if (context.read<UserProvider>().isAuth == true) {
+//                     context.go("/mainscreen");
+//                   } else {
+//                     print("Error");
+//                   }
+                  context.go("/mainscreen");
                 },
                 style: ElevatedButton.styleFrom(
                     textStyle: TextStyle(fontSize: 20),
